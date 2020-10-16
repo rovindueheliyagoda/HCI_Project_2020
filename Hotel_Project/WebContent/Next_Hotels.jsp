@@ -60,7 +60,7 @@
 
 body {
 	background-color: #f1f1f1;
-	padding: 10px;
+		overflow-x: hidden;
 	font-family: Arial;
 }
 
@@ -302,6 +302,48 @@ to {
 		width: 100%;
 	}
 }
+
+/* ------------- end --------*/
+
+/*Scroll Button*/
+#scolbtn {
+	display: inline-block;
+	background-color: none;
+	width: 50px;
+	height: 50px;
+	text-align: center;
+	border-radius: 4px;
+	position: fixed;
+	bottom: 30px;
+	right: 30px;
+	transition: background-color .3s, opacity .5s, visibility .5s;
+	opacity: 0;
+	visibility: hidden;
+	z-index: 1000;
+}
+
+#scolbtn::after {
+	font-family: FontAwesome;
+	font-weight: normal;
+	font-style: normal;
+	font-size: 2em;
+	line-height: 50px;
+	color: none;
+}
+
+#scolbtn:hover {
+	cursor: pointer;
+	background-color: none;
+}
+
+#scolbtn:active {
+	background-color: none;
+}
+
+#scolbtn.show {
+	opacity: 1;
+	visibility: visible;
+}
 </style>
 
 </head>
@@ -358,18 +400,22 @@ to {
 				<div class="d-flex justify-content-center">
 					<ul class="navbar-nav">
 						<li class="nav-item active ml-0"><a class="nav-link"
-							href="Error.jsp"><b>Home</b> <span class="sr-only">(current)</span>
+							href="LandingPage.jsp"><b>Home</b> <span class="sr-only">(current)</span>
 						</a></li>
 						<li class="nav-item ml-5"><a class="nav-link"
-							href="Error.jsp"><b>Services</b></a></li>
+							href="Error.jsp"><b>Contact Us</b></a></li>
 						<li class="nav-item ml-5"><a class="nav-link"
-							href="Error.jsp"><b>AboutUs</b></a></li>
+							href="Error.jsp"><b>About Us</b></a></li>
 					</ul>
 				</div>
 			</div>
 			<!-- End Collapse Navbar -->
 		</nav>
 		<!-- End of Navigation -->
+
+		<!-- Scroll Button -->
+		<a id="scolbtn"><i class="fas fa-arrow-circle-up"
+			style='font-size: 40px; color: #007BFC'></i></a>
 
 		<!-- Sorting -->
 
@@ -416,16 +462,20 @@ to {
 					<ul class="dropdown-menu scrollable-menu" role="menu">
 						<div id="myBtnContainer">
 							<li><button class="button button1"
-									onclick="filterSelection('all')" style="width: 255px;">Location All</button></li>
+									onclick="filterSelection('all')" style="width: 255px;">Location
+									All</button></li>
 							<li><button class="button button1"
 									onclick="filterSelection('L1')" style="width: 255px;">
 									Location 1</button></li>
 							<li><button class="button button1"
-									onclick="filterSelection('cars')" style="width: 255px;">Location 2</button></li>
+									onclick="filterSelection('cars')" style="width: 255px;">Location
+									2</button></li>
 							<li><button class="button button1"
-									onclick="filterSelection('people')" style="width: 255px;">Location 3</button></li>
+									onclick="filterSelection('people')" style="width: 255px;">Location
+									3</button></li>
 							<li><button class="button button1"
-									onclick="filterSelection('people')" style="width: 255px;">Location 4</button></li>
+									onclick="filterSelection('people')" style="width: 255px;">Location
+									4</button></li>
 						</div>
 					</ul>
 				</div>
@@ -487,12 +537,12 @@ to {
 									<h5 class="card-title">Hotel Name 1</h5>
 								</div>
 								<div class="col-sm">
-									<a href="Error.jsp" class="btn btn-light ml-5"> <i
-										class="fas fa-photo-video"></i>
+									<a href="#" class="ml-5"> <i
+										class=""></i>
 									</a>
 								</div>
 								<div class="col-sm">
-									<a href="Error.jsp" class="btn btn-light"><i
+									<a href="hotel_info.jsp" class="btn btn-light"><i
 										class="fas fa-external-link-alt"></i></a>
 								</div>
 							</div>
@@ -520,12 +570,12 @@ to {
 									<h5 class="card-title">Hotel Name 2</h5>
 								</div>
 								<div class="col-sm">
-									<a href="Error.jsp" class="btn btn-light ml-5"> <i
-										class="fas fa-photo-video"></i>
+									<a href="#" class=" ml-5"> <i
+										class=""></i>
 									</a>
 								</div>
 								<div class="col-sm">
-									<a href="Error.jsp" class="btn btn-light"><i
+									<a href="hotel_info.jsp" class="btn btn-light"><i
 										class="fas fa-external-link-alt"></i></a>
 								</div>
 							</div>
@@ -553,12 +603,12 @@ to {
 									<h5 class="card-title">Hotel Name 3</h5>
 								</div>
 								<div class="col-sm">
-									<a href="Error.jsp" class="btn btn-light ml-5"> <i
-										class="fas fa-photo-video"></i>
+									<a href="#" class="ml-5"> <i
+										class=""></i>
 									</a>
 								</div>
 								<div class="col-sm">
-									<a href="Error.jsp" class="btn btn-light"><i
+									<a href="hotel_info.jsp" class="btn btn-light"><i
 										class="fas fa-external-link-alt"></i></a>
 								</div>
 							</div>
@@ -579,7 +629,7 @@ to {
 			<div class="column cars">
 				<div class="content">
 					<div class="card" style="width: auto;">
-						<img class="card-img-top" src="Resources/25577663.jpg"
+						<img class="card-img-top" src="Resources/p2.jpg"
 							alt="Card image cap">
 						<div class="card-body">
 							<div class="row">
@@ -587,12 +637,12 @@ to {
 									<h5 class="card-title">Hotel Name 4</h5>
 								</div>
 								<div class="col-sm">
-									<a href="Error.jsp" class="btn btn-light ml-5"> <i
-										class="fas fa-photo-video"></i>
+									<a href="#" class=" ml-5"> <i
+										class=""></i>
 									</a>
 								</div>
 								<div class="col-sm">
-									<a href="Error.jsp" class="btn btn-light"><i
+									<a href="hotel_info.jsp" class="btn btn-light"><i
 										class="fas fa-external-link-alt"></i></a>
 								</div>
 							</div>
@@ -612,7 +662,7 @@ to {
 			<div class="column cars">
 				<div class="content">
 					<div class="card" style="width: auto;">
-						<img class="card-img-top" src="Resources/25577663.jpg"
+						<img class="card-img-top" src="Resources/p2.jpg"
 							alt="Card image cap">
 						<div class="card-body">
 							<div class="row">
@@ -620,12 +670,12 @@ to {
 									<h5 class="card-title">Hotel Name 5</h5>
 								</div>
 								<div class="col-sm">
-									<a href="Error.jsp" class="btn btn-light ml-5"> <i
-										class="fas fa-photo-video"></i>
+									<a href="#" class=" ml-5"> <i
+										class=""></i>
 									</a>
 								</div>
 								<div class="col-sm">
-									<a href="Error.jsp" class="btn btn-light"><i
+									<a href="hotel_info.jsp" class="btn btn-light"><i
 										class="fas fa-external-link-alt"></i></a>
 								</div>
 							</div>
@@ -645,7 +695,7 @@ to {
 			<div class="column cars">
 				<div class="content">
 					<div class="card" style="width: auto;">
-						<img class="card-img-top" src="Resources/25577663.jpg"
+						<img class="card-img-top" src="Resources/p2.jpg"
 							alt="Card image cap">
 						<div class="card-body">
 							<div class="row">
@@ -653,12 +703,12 @@ to {
 									<h5 class="card-title">Hotel Name 6</h5>
 								</div>
 								<div class="col-sm">
-									<a href="Error.jsp" class="btn btn-light ml-5"> <i
-										class="fas fa-photo-video"></i>
+									<a href="#" class="ml-5"> <i
+										class=""></i>
 									</a>
 								</div>
 								<div class="col-sm">
-									<a href="Error.jsp" class="btn btn-light"><i
+									<a href="hotel_info.jsp" class="btn btn-light"><i
 										class="fas fa-external-link-alt"></i></a>
 								</div>
 							</div>
@@ -679,7 +729,7 @@ to {
 			<div class="column people">
 				<div class="content">
 					<div class="card" style="width: auto;">
-						<img class="card-img-top" src="Resources/25577663.jpg"
+						<img class="card-img-top" src="Resources/p1.jpg"
 							alt="Card image cap">
 						<div class="card-body">
 							<div class="row">
@@ -687,12 +737,12 @@ to {
 									<h5 class="card-title">Hotel Name 7</h5>
 								</div>
 								<div class="col-sm">
-									<a href="Error.jsp" class="btn btn-light ml-5"> <i
-										class="fas fa-photo-video"></i>
+									<a href="#" class="ml-5"> <i
+										class=""></i>
 									</a>
 								</div>
 								<div class="col-sm">
-									<a href="Error.jsp" class="btn btn-light"><i
+									<a href="hotel_info.jsp" class="btn btn-light"><i
 										class="fas fa-external-link-alt"></i></a>
 								</div>
 							</div>
@@ -712,7 +762,7 @@ to {
 			<div class="column people">
 				<div class="content">
 					<div class="card" style="width: auto;">
-						<img class="card-img-top" src="Resources/25577663.jpg"
+						<img class="card-img-top" src="Resources/p1.jpg"
 							alt="Card image cap">
 						<div class="card-body">
 							<div class="row">
@@ -720,12 +770,12 @@ to {
 									<h5 class="card-title">Hotel Name 8</h5>
 								</div>
 								<div class="col-sm">
-									<a href="Error.jsp" class="btn btn-light ml-5"> <i
-										class="fas fa-photo-video"></i>
+									<a href="#" class="ml-5"> <i
+										class=""></i>
 									</a>
 								</div>
 								<div class="col-sm">
-									<a href="Error.jsp" class="btn btn-light"><i
+									<a href="hotel_info.jsp" class="btn btn-light"><i
 										class="fas fa-external-link-alt"></i></a>
 								</div>
 							</div>
@@ -745,7 +795,7 @@ to {
 			<div class="column people">
 				<div class="content">
 					<div class="card" style="width: auto;">
-						<img class="card-img-top" src="Resources/25577663.jpg"
+						<img class="card-img-top" src="Resources/p1.jpg"
 							alt="Card image cap">
 						<div class="card-body">
 							<div class="row">
@@ -753,12 +803,12 @@ to {
 									<h5 class="card-title">Hotel Name 9</h5>
 								</div>
 								<div class="col-sm">
-									<a href="Error.jsp" class="btn btn-light ml-5"> <i
-										class="fas fa-photo-video"></i>
+									<a href="#" class="ml-5"> <i
+										class=""></i>
 									</a>
 								</div>
 								<div class="col-sm">
-									<a href="Error.jsp" class="btn btn-light"><i
+									<a href="hotel_info.jsp" class="btn btn-light"><i
 										class="fas fa-external-link-alt"></i></a>
 								</div>
 							</div>
@@ -790,6 +840,27 @@ to {
 		<!-- END MAIN -->
 	</div>
 	<!-- End Content Section -->
+
+	<!-- Scoll Up Btn -->
+	<script type="text/javascript">
+		var btn = $('#scolbtn');
+
+		$(window).scroll(function() {
+			if ($(window).scrollTop() > 300) {
+				btn.addClass('show');
+			} else {
+				btn.removeClass('show');
+			}
+		});
+
+		btn.on('click', function(e) {
+			e.preventDefault();
+			$('html, body').animate({
+				scrollTop : 0
+			}, '300');
+		});
+	</script>
+	<!-- End scroll Btn -->
 
 	<!-- Pagination -->
 	<div class="container mb-4">

@@ -60,7 +60,7 @@
 
 body {
 	background-color: #f1f1f1;
-	padding: 10px;
+	overflow-x: hidden;
 	font-family: Arial;
 }
 
@@ -194,6 +194,47 @@ h1 {
 	text-align: center;
 }
 /* End footer */
+
+
+/*Scroll Button*/
+#scolbtn {
+  display: inline-block;
+  background-color:none;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  border-radius: 4px;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  transition: background-color .3s, 
+    opacity .5s, visibility .5s;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1000;
+}
+#scolbtn::after {
+  
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 2em;
+  line-height: 50px;
+  color:none;
+}
+#scolbtn:hover {
+  cursor: pointer;
+  background-color: none;
+}
+#scolbtn:active {
+  background-color: none;
+}
+#scolbtn.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+
 </style>
 
 </head>
@@ -222,7 +263,8 @@ h1 {
 					<img class="d-block w-100" src="Resources/p3.jpg" alt="Third slide">
 				</div>
 				<div class="carousel-item">
-					<img class="d-block w-100" src="Resources/p4.jpg" alt="Fourth slide">
+					<img class="d-block w-100" src="Resources/p4.jpg"
+						alt="Fourth slide">
 				</div>
 			</div>
 			<a class="carousel-control-prev" href="#carouselExampleIndicators"
@@ -249,18 +291,23 @@ h1 {
 				<div class="d-flex justify-content-center">
 					<ul class="navbar-nav">
 						<li class="nav-item active ml-0"><a class="nav-link"
-							href="Error.jsp"><b>Home</b> <span class="sr-only">(current)</span>
+							href="LandingPage.jsp"><b>Home</b> <span class="sr-only">(current)</span>
 						</a></li>
 						<li class="nav-item ml-5"><a class="nav-link"
-							href="Error.jsp"><b>Services</b></a></li>
+							href="Error.jsp"><b>Contact Us</b></a></li>
 						<li class="nav-item ml-5"><a class="nav-link"
-							href="Error.jsp"><b>AboutUs</b></a></li>
+							href="Error.jsp"><b>About Us</b></a></li>
 					</ul>
 				</div>
 			</div>
 			<!-- End Collapse Navbar -->
 		</nav>
 		<!-- End of Navigation -->
+		
+		<!-- Page Scroll Up Button  -->
+		<!-- Back to top button -->
+		 <a id="scolbtn"><i class="fas fa-arrow-circle-up" style='font-size:40px;color:#007BFC'></i></a>
+		<!-- End of auto scroll -->
 
 		<!-- Sorting -->
 
@@ -274,20 +321,29 @@ h1 {
 						<b>Hotel Type</b>
 					</button>
 					<ul class="dropdown-menu scrollable-menu" role="menu">
-						<li><a href="#">Action</a></li>
-						<li><a href="#">Another action</a></li>
-						<li><a href="#">Something else here</a></li>
-						<li><a href="#">Action</a></li>
-						<li><a href="#">Another action</a></li>
-						<li><a href="#">Something else here</a></li>
-						<li><a href="#">Action</a></li>
-						<li><a href="#">Another action</a></li>
-						<li><a href="#">Something else here</a></li>
-						<li><a href="#">Action</a></li>
-						<li><a href="#">Another action</a></li>
-						<li><a href="#">Something else here</a></li>
-						<li><a href="#">Action</a></li>
-						<li><a href="#">Another action</a></li>
+						<div id="myBtnContainer">
+							<li><button class="button button1"
+									onclick="filterSelection('all')" style="width: 255px;">Hotel
+									Type All</button></li>
+							<li><button class="button button1"
+									onclick="filterSelection('nature')" style="width: 255px;">Hotel
+									Type 1</button></li>
+							<li><button class="button button1"
+									onclick="filterSelection('cars')" style="width: 255px;">Hotel
+									Type 2</button></li>
+							<li><button class="button button1"
+									onclick="filterSelection('people')" style="width: 255px;">Hotel
+									Type 3</button></li>
+							<li><button class="button button1"
+									onclick="filterSelection('people')" style="width: 255px;">Hotel
+									Type 4</button></li>
+							<li><button class="button button1"
+									onclick="filterSelection('people')" style="width: 255px;">Hotel
+									Type 5</button></li>
+							<li><button class="button button1"
+									onclick="filterSelection('people')" style="width: 255px;">Hotel
+									Type 6</button></li>
+						</div>
 					</ul>
 				</div>
 			</div>
@@ -301,20 +357,29 @@ h1 {
 						<b>Location</b>
 					</button>
 					<ul class="dropdown-menu scrollable-menu" role="menu">
-						<li><a href="#">Action</a></li>
-						<li><a href="#">Another action</a></li>
-						<li><a href="#">Something else here</a></li>
-						<li><a href="#">Action</a></li>
-						<li><a href="#">Another action</a></li>
-						<li><a href="#">Something else here</a></li>
-						<li><a href="#">Action</a></li>
-						<li><a href="#">Another action</a></li>
-						<li><a href="#">Something else here</a></li>
-						<li><a href="#">Action</a></li>
-						<li><a href="#">Another action</a></li>
-						<li><a href="#">Something else here</a></li>
-						<li><a href="#">Action</a></li>
-						<li><a href="#">Another action</a></li>
+						<div id="myBtnContainer">
+							<li><button class="button button1"
+									onclick="filterSelection('all')" style="width: 255px;">Location
+									All</button></li>
+							<li><button class="button button1"
+									onclick="filterSelection('nature')" style="width: 255px;">Location
+									1</button></li>
+							<li><button class="button button1"
+									onclick="filterSelection('cars')" style="width: 255px;">Location
+									2</button></li>
+							<li><button class="button button1"
+									onclick="filterSelection('people')" style="width: 255px;">Location
+									3</button></li>
+							<li><button class="button button1"
+									onclick="filterSelection('people')" style="width: 255px;">Location
+									4</button></li>
+							<li><button class="button button1"
+									onclick="filterSelection('people')" style="width: 255px;">Location
+									5</button></li>
+							<li><button class="button button1"
+									onclick="filterSelection('people')" style="width: 255px;">Location
+									6</button></li>
+						</div>
 					</ul>
 				</div>
 			</div>
@@ -343,7 +408,8 @@ h1 {
 									Name 3</button></li>
 							<li><button class="button button1"
 									onclick="filterSelection('people')" style="width: 255px;">Hotel
-									Name 3</button></li>
+									Name 4</button></li>
+						</div>
 					</ul>
 				</div>
 			</div>
@@ -362,7 +428,7 @@ h1 {
 			<div class="column nature">
 				<div class="content">
 					<div class="card" style="width: auto;">
-						<img class="card-img-top" src="Resources/p1.jpg"
+						<img class="card-img-top hover-shadow cursor" src="Resources/p1.jpg"
 							alt="Card image cap">
 						<div class="card-body">
 							<div class="row">
@@ -370,8 +436,8 @@ h1 {
 									<h5 class="card-title">Hotel Name 1</h5>
 								</div>
 								<div class="col-sm">
-									<a href="Error.jsp" class="btn btn-light ml-5"> <i
-										class="fas fa-photo-video"></i>
+									<a href="#" class=" ml-5"> <i
+										class=""></i>
 									</a>
 								</div>
 								<div class="col-sm">
@@ -395,7 +461,7 @@ h1 {
 			<div class="column nature">
 				<div class="content">
 					<div class="card" style="width: auto">
-						<img class="card-img-top" src="Resources/p1.jpg"
+						<img class="card-img-top hover-shadow cursor" src="Resources/p1.jpg"
 							alt="Card image cap">
 						<div class="card-body">
 							<div class="row">
@@ -403,12 +469,12 @@ h1 {
 									<h5 class="card-title">Hotel Name 1</h5>
 								</div>
 								<div class="col-sm">
-									<a href="Error.jsp" class="btn btn-light ml-5"> <i
-										class="fas fa-photo-video"></i>
+									<a href="#" class=" ml-5"> <i
+										class=""></i>
 									</a>
 								</div>
 								<div class="col-sm">
-									<a href="Error.jsp" class="btn btn-light"><i
+									<a href="hotel_info.jsp" class="btn btn-light"><i
 										class="fas fa-external-link-alt"></i></a>
 								</div>
 							</div>
@@ -436,12 +502,12 @@ h1 {
 									<h5 class="card-title">Hotel Name 1</h5>
 								</div>
 								<div class="col-sm">
-									<a href="Error.jsp" class="btn btn-light ml-5"> <i
-										class="fas fa-photo-video"></i>
+									<a href="#" class="ml-5"> <i
+										class=""></i>
 									</a>
 								</div>
 								<div class="col-sm">
-									<a href="Error.jsp" class="btn btn-light"><i
+									<a href="hotel_info.jsp" class="btn btn-light"><i
 										class="fas fa-external-link-alt"></i></a>
 								</div>
 							</div>
@@ -470,12 +536,12 @@ h1 {
 									<h5 class="card-title">Hotel Name 2</h5>
 								</div>
 								<div class="col-sm">
-									<a href="Error.jsp" class="btn btn-light ml-5"> <i
-										class="fas fa-photo-video"></i>
+									<a href="#" class=" ml-5"> <i
+										class=""></i>
 									</a>
 								</div>
 								<div class="col-sm">
-									<a href="Error.jsp" class="btn btn-light"><i
+									<a href="hotel_info.jsp" class="btn btn-light"><i
 										class="fas fa-external-link-alt"></i></a>
 								</div>
 							</div>
@@ -503,12 +569,12 @@ h1 {
 									<h5 class="card-title">Hotel Name 2</h5>
 								</div>
 								<div class="col-sm">
-									<a href="Error.jsp" class="btn btn-light ml-5"> <i
-										class="fas fa-photo-video"></i>
+									<a href="#" class=" ml-5"> <i
+										class=""></i>
 									</a>
 								</div>
 								<div class="col-sm">
-									<a href="Error.jsp" class="btn btn-light"><i
+									<a href="hotel_info.jsp" class="btn btn-light"><i
 										class="fas fa-external-link-alt"></i></a>
 								</div>
 							</div>
@@ -536,12 +602,12 @@ h1 {
 									<h5 class="card-title">Hotel Name 2</h5>
 								</div>
 								<div class="col-sm">
-									<a href="Error.jsp" class="btn btn-light ml-5"> <i
-										class="fas fa-photo-video"></i>
+									<a href="#" class="ml-5"> <i
+										class=""></i>
 									</a>
 								</div>
 								<div class="col-sm">
-									<a href="Error.jsp" class="btn btn-light"><i
+									<a href="hotel_info.jsp" class="btn btn-light"><i
 										class="fas fa-external-link-alt"></i></a>
 								</div>
 							</div>
@@ -570,12 +636,12 @@ h1 {
 									<h5 class="card-title">Hotel Name 3</h5>
 								</div>
 								<div class="col-sm">
-									<a href="Error.jsp" class="btn btn-light ml-5"> <i
-										class="fas fa-photo-video"></i>
+									<a href="#" class=" ml-5"> <i
+										class=""></i>
 									</a>
 								</div>
 								<div class="col-sm">
-									<a href="Error.jsp" class="btn btn-light"><i
+									<a href="hotel_info.jsp" class="btn btn-light"><i
 										class="fas fa-external-link-alt"></i></a>
 								</div>
 							</div>
@@ -603,12 +669,12 @@ h1 {
 									<h5 class="card-title">Hotel Name 3</h5>
 								</div>
 								<div class="col-sm">
-									<a href="Error.jsp" class="btn btn-light ml-5"> <i
-										class="fas fa-photo-video"></i>
+									<a href="#" class=" ml-5"> <i
+										class=""></i>
 									</a>
 								</div>
 								<div class="col-sm">
-									<a href="Error.jsp" class="btn btn-light"><i
+									<a href="hotel_info.jsp" class="btn btn-light"><i
 										class="fas fa-external-link-alt"></i></a>
 								</div>
 							</div>
@@ -636,12 +702,12 @@ h1 {
 									<h5 class="card-title">Hotel Name 3</h5>
 								</div>
 								<div class="col-sm">
-									<a href="Error.jsp" class="btn btn-light ml-5"> <i
-										class="fas fa-photo-video"></i>
+									<a href="#" class=" ml-5"> <i
+										class=""></i>
 									</a>
 								</div>
 								<div class="col-sm">
-									<a href="Error.jsp" class="btn btn-light"><i
+									<a href="hotel_info.jsp" class="btn btn-light"><i
 										class="fas fa-external-link-alt"></i></a>
 								</div>
 							</div>
@@ -698,7 +764,7 @@ h1 {
 					</button>-->
 				</div>
 				<div class="modal-body">
-					<h4 class="modal-title" style="text-align: center; color:  #1F618D;">
+					<h4 class="modal-title" style="text-align: center; color: #1F618D;">
 						<b>Welcome to Chester Tourist</b>
 					</h4>
 					<img class="card-img-top"
@@ -706,13 +772,35 @@ h1 {
 						alt="Card image cap">
 				</div>
 				<div class="modal-footer">
-					<button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+					<button style="border-radius: 20px;" type="button"
+						class="btn btn-danger" data-dismiss="modal">Close</button>
 				</div>
 			</div>
 
 		</div>
 	</div>
 	<!-- End Of welcome model -->
+
+	<!-- Scoll Up Btn -->
+	<script type="text/javascript">
+		var btn = $('#scolbtn');
+
+		$(window).scroll(function() {
+			if ($(window).scrollTop() > 300) {
+				btn.addClass('show');
+			} else {
+				btn.removeClass('show');
+			}
+		});
+
+		btn.on('click', function(e) {
+			e.preventDefault();
+			$('html, body').animate({
+				scrollTop : 0
+			}, '300');
+		});
+	</script>
+	<!-- End scroll Btn -->
 
 
 	<!-- Page Sorting -->

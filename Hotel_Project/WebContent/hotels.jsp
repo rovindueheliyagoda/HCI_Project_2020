@@ -163,7 +163,9 @@
 			<!-- Links -->
 			<ul class="navbar-nav mr-auto">
 				<li class="nav-item "><a class="nav-link"
-					href="hotels_home.jsp"><i class="fas fa-hotel"></i></a></li>
+					href="LandingPage.jsp"><i class="fas fa-hotel"></i></a></li>
+				<li class="nav-item "><a class="nav-link"
+					href="hotels_home.jsp">Hotels</a></li>
 			</ul>
 			<ul class="navbar-nav ml-auto">
 
@@ -228,9 +230,11 @@
 
 		<!-- Breadcrumb -->
 		<nav aria-label="breadcrumb">
-			<ol class="breadcrumb ml-1" style="width: 300px;">
-				<li class="breadcrumb-item"><a href="Error.jsp">Home</a></li>
+			<ol class="breadcrumb ml-1" style="width: 450px;">
+				<li class="breadcrumb-item"><a href="LandingPage.jsp">Home</a></li>
 				<li class="breadcrumb-item"><a href="hotels_home.jsp">Hotels</a></li>
+				<li class="breadcrumb-item"><a href="hotel_info.jsp">Hotel</a></li>
+				<li class="breadcrumb-item"><a href="Hotel_Solo.jsp">Accommodation</a></li>
 				<li class="breadcrumb-item active" aria-current="page">Booking</li>
 			</ol>
 		</nav>

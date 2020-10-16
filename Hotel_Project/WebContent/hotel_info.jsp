@@ -28,6 +28,49 @@
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <script src="Components/jquery-3.5.0.min.js"></script>
 <script src="Components/patients.js"></script>
+
+<style>
+/*Scroll Button*/
+#scolbtn {
+	display: inline-block;
+	background-color: none;
+	width: 50px;
+	height: 50px;
+	text-align: center;
+	border-radius: 4px;
+	position: fixed;
+	bottom: 30px;
+	right: 30px;
+	transition: background-color .3s, opacity .5s, visibility .5s;
+	opacity: 0;
+	visibility: hidden;
+	z-index: 1000;
+}
+
+#scolbtn::after {
+	font-family: FontAwesome;
+	font-weight: normal;
+	font-style: normal;
+	font-size: 2em;
+	line-height: 50px;
+	color: none;
+}
+
+#scolbtn:hover {
+	cursor: pointer;
+	background-color: none;
+}
+
+#scolbtn:active {
+	background-color: none;
+}
+
+#scolbtn.show {
+	opacity: 1;
+	visibility: visible;
+}
+</style>
+
 </head>
 <body>
 
@@ -49,7 +92,13 @@
 			<!-- Links -->
 			<ul class="navbar-nav mr-auto">
 				<li class="nav-item "><a class="nav-link"
-					href="hotels_home.jsp"><i class="fas fa-hotel"></i></a></li>
+					href="LandingPage.jsp"><i class="fas fa-hotel"></i></a></li>
+					<li class="nav-item "><a class="nav-link" href="hotels_home.jsp">Hotels</a></li>
+				<li class="nav-item "><a class="nav-link" href="#">Guest
+						House</a></li>
+				<li class="nav-item "><a class="nav-link" href="#">Resturant</a></li>
+				<li class="nav-item "><a class="nav-link" href="#">Events</a></li>
+				<li class="nav-item "><a class="nav-link" href="#">Pubs</a></li>
 			</ul>
 			<!-- Links -->
 		</div>
@@ -58,6 +107,10 @@
 	<br>
 
 	<!-- ---------------------------- End of Navigation Bar ----------------------------- -->
+
+	<!-- Scroll Button -->
+	<a id="scolbtn"><i class="fas fa-arrow-circle-up"
+		style='font-size: 40px; color: #007BFC'></i></a>
 
 	<!-- Intro -->
 
@@ -76,61 +129,10 @@
 	</div>
 	<!-- End of welcome Banner -->
 
-
-
-	<!--<div class="container" style="border: 1px;">
-		<div class="row mt-5">
-			<div class="col ">
-				<div class="jumbotron mt-5"
-					style="background-color: #a9cad6; height: 300px;">
-					<div class="text-black text-center py-5 px-4">
-						<div>
-							<h2 class="card-title h1-responsive pt-3 mb-5 font-bold">
-								<strong>Welcome to Hotel!</strong>
-							</h2>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col pl-5 pt-4 ml-5 mt-5" style="background-color: none;">
-				<div class="container" style="background-color: none;">
-					<div class="text-black text-center py-5 px-4">
-						<div>
-							<h2 class="card-title h1-responsive pt-3 mb-5 font-bold">
-								<strong>Welcome to Hotel!</strong>
-							</h2>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col ">
-				<div class="jumbotron card card-image mt-5"
-					style="background-color: none; height: 300px; background-image: url(Resources/Hotel.jpg); background-position: center; background-size: 580px 380px;">
-				</div>
-			</div>
-		</div>
-	</div>
-	<hr style="width: 92%;">-->
-
-
-	<!--<div class="jumbotron card card-image mr-3 ml-3 mt-5"
-					style="background-image: url(Resources/.jpg);">
-  <div class="container">
-					<div class="text-white text-center py-5 px-4">
-						<div>
-							<h2 class="card-title h1-responsive pt-3 mb-5 font-bold">
-								<strong>Welcome to Hotel!</strong>
-							</h2>
-						</div>
-					</div>
-  </div>
-</div>-->
-	<!-- End -->
-
 	<!-- Breadcrumb -->
 	<nav aria-label="breadcrumb">
 		<ol class="breadcrumb ml-5 mt-3" style="width: 300px;">
-			<li class="breadcrumb-item"><a href="Error.jsp">Home</a></li>
+			<li class="breadcrumb-item"><a href="LandingPage.jsp">Home</a></li>
 			<li class="breadcrumb-item"><a href="hotels_home.jsp">Hotels</a></li>
 			<li class="breadcrumb-item active" aria-current="page">Hotel</li>
 		</ol>
@@ -152,8 +154,8 @@
 						Holiday Inn Chester South offers comfortable accommodation in an
 						excellent location for both business and leisure visitors alike.</p>
 					<p class="h4 mb-3 mt-3" style="color: #34495E;">
-						Point Of Interest <i class="fas fa-street-view"
-							style="color: green;"></i>
+						<i class="fas fa-street-view" style="color: green;"></i> &nbsp;
+						Point Of Interest
 					</p>
 					<ul class="list-inline" style="font-weight: bold;">
 						<li class="list-inline-item"><i class="fas fa-paw"
@@ -188,7 +190,7 @@
 				<div class="row">
 					<div class="col m-3">
 
-						<img src="Resources/hotel_icon1.png" class="card-img-top"
+						<img src="Resources/hotel_icon1.png" class="card-img-top mt-5"
 							alt="hotel room">
 					</div>
 					<!-- Col closed -->
@@ -206,7 +208,9 @@
 						without.</p>
 					<div class="row">
 						<div class="col">
-							<p class="h4 mb-3 mt-3" style="color: #34495E;">Accomodation</p>
+							<p class="h4 mb-3 mt-3" style="color: #34495E;">
+								<i class="fas fa-bed"></i>&nbsp; Accomodation
+							</p>
 							<ul class="list-inline"
 								style="font-weight: bold; margin-bottom: -5px;">
 								<li class="list-inline-item"><i class="fas fa-door-open"></i>
@@ -215,22 +219,28 @@
 									style="color: black;"></i>
 									<p>Room Type</p></li>
 							</ul>
-							<a href="Hotel_Solo.jsp" class="btn btn-success btn-sm"
-								style="border: none; font-weight: bold;">Accommodation&nbsp;&nbsp;&nbsp; <i class="fas fa-long-arrow-alt-right"></i></a>
+							<a href="Hotel_Solo.jsp" class="btn btn-primary btn-sm"
+								style="border: none; font-weight: bold;">Accommodation&nbsp;&nbsp;&nbsp;
+								<i class="fas fa-long-arrow-alt-right"></i>
+							</a>
 						</div>
 						<div class="col">
-							<p class="h4 mb-3 mt-3" style="color: #34495E;">Other
-								Facilities</p>
+							<p class="h4 mb-3 mt-3" style="color: #34495E;">
+								<i class='fas fa-certificate'></i> &nbsp;Other Facilities
+							</p>
 							<ul class="list-inline" style="font-weight: bold;">
 								<li class="list-inline-item"><i class="fas fa-table-tennis"></i>
 									<p>Tennis</p></li>
-								<li class="list-inline-item"><i class="fas fa-swimmer"></i>
-									<p>Pool</p></li>
+								<li class="list-inline-item"><i
+									class="fas fa-swimming-pool"></i>
+									<p>Swimming-pool</p></li>
 								<li class="list-inline-item"><i class="fas fa-parking"
 									style="color: blue;"></i>
 									<p>Parking</p></li>
 								<li class="list-inline-item"><i class="fas fa-wifi"></i>
 									<p>Wifi</p></li>
+								<li class="list-inline-item"><i class="fas fa-spa"></i>
+									<p>Spa</p></li>
 							</ul>
 						</div>
 					</div>
@@ -245,39 +255,50 @@
 					<h1>Contact Us</h1>
 					<div class="row">
 						<div class="col">
-							<p class="h4 mb-3 mt-3" style="color: #34495E;">Address</p>
+							<p class="h4 mb-3 mt-3" style="color: #34495E;">
+								<i class="fas fa-map-marker-alt"></i> &nbsp; Address
+							</p>
 							<ul class="list-inline" style="font-weight: bold;">
-								<li class="list-inline-item"><i class="fas fa-door-open"></i>
-									<p>NO OF ROOMS</p></li>
-								<li class="list-inline-item"><i
-									class="fas fa-expand-arrows-alt"></i>
-									<p>ROOM SIZE</p></li>
-								<li class="list-inline-item"><i class="fas fa-bed"></i>
-									<p>BEDS</p></li>
+								<li class="list-inline-item">
+									<p>NO 302/12</p>
+								</li>
+								<br>
+								<li class="list-inline-item">
+									<p>Chester</p>
+								</li>
+								<br>
+								<li class="list-inline-item">
+									<p>London</p>
+								</li>
 							</ul>
 						</div>
 						<div class="col">
-							<p class="h4 mb-3 mt-3" style="color: #34495E;">Phone</p>
+							<p class="h4 mb-3 mt-3" style="color: #34495E;">
+								<i class="fas fa-phone"></i> &nbsp; Phone
+							</p>
 							<ul class="list-inline" style="font-weight: bold;">
-								<li class="list-inline-item"><i class="fas fa-door-open"></i>
-									<p>NO OF ROOMS</p></li>
-								<li class="list-inline-item"><i
-									class="fas fa-expand-arrows-alt"></i>
-									<p>ROOM SIZE</p></li>
-								<li class="list-inline-item"><i class="fas fa-bed"></i>
-									<p>BEDS</p></li>
+								<li class="list-inline-item">
+									<p>+01-121-121-1221</p>
+								</li>
+								<li class="list-inline-item">
+									<p>+04-341-212-5532</p>
+								</li>
+								<li class="list-inline-item">
+									<p>+03-123-745-2343</p>
+								</li>
 							</ul>
 						</div>
 						<div class="col">
-							<p class="h4 mb-3 mt-3" style="color: #34495E;">Email</p>
+							<p class="h4 mb-3 mt-3" style="color: #34495E;">
+								<i class="fas fa-at"></i> &nbsp; Email
+							</p>
 							<ul class="list-inline" style="font-weight: bold;">
-								<li class="list-inline-item"><i class="fas fa-door-open"></i>
-									<p>NO OF ROOMS</p></li>
-								<li class="list-inline-item"><i
-									class="fas fa-expand-arrows-alt"></i>
-									<p>ROOM SIZE</p></li>
-								<li class="list-inline-item"><i class="fas fa-bed"></i>
-									<p>BEDS</p></li>
+								<li class="list-inline-item">
+									<p>sample@gmail.com</p>
+								</li>
+								<li class="list-inline-item">
+									<p>sample@gmail.com</p>
+								</li>
 							</ul>
 						</div>
 					</div>
@@ -286,7 +307,7 @@
 			<div class="col-sm-4">
 
 				<div class="row">
-					<div class="col m-3">
+					<div class="col m-4">
 
 						<img src="Resources/call1.jpg" class="card-img-top"
 							alt="hotel room">
@@ -300,6 +321,28 @@
 
 	</div>
 	<!-- End of main body -->
+
+
+	<!-- Scoll Up Btn -->
+	<script type="text/javascript">
+		var btn = $('#scolbtn');
+
+		$(window).scroll(function() {
+			if ($(window).scrollTop() > 300) {
+				btn.addClass('show');
+			} else {
+				btn.removeClass('show');
+			}
+		});
+
+		btn.on('click', function(e) {
+			e.preventDefault();
+			$('html, body').animate({
+				scrollTop : 0
+			}, '300');
+		});
+	</script>
+	<!-- End scroll Btn -->
 
 
 	<!-- --------------------------- Footer -------------------------- -->

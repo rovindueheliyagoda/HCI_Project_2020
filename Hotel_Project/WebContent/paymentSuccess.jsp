@@ -23,6 +23,12 @@
 
 body {
 	font-family: Arial, Helvetica, sans-serif;
+	background-color: #F4F6F8;
+}
+
+img{
+   margin-top: 80px;
+   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 * {
@@ -82,37 +88,43 @@ input[type=submit]:hover {
 	}
 }
 </style>
+<script>
+setTimeout(function() {
+    setInterval(function() {
+        $('#img1').attr('src',$('#img1').attr('src'))
+    },3)
+}, 2000)
+</script>
 </head>
 <body>
 
 	<div class="content">
 		<div class="container mt-5">
 
-			<div style="text-align: center">
-				<h2 style="color: green; font-weight: bold;">Payment Success!</h2>
-				<p style="color: #EDB265; font-weight: bold;">Thank you!</p>
-			</div>
+
 			<div class="d-flex justify-content-center">
-				<img src="Resources/confirm uccess Animation.gif"
-					style="width: 480px">
+				<img id="img1" style="border-radius: 20px; height:210px; width:280px;" src="Resources/1loop1.gif">
+				<!--<img style="border-radius: 20px; height: 250px; width:350px;" src="Resources/s1.png">-->
+				<!--<i class="fas fa-check-circle p-5" style=" color: green;"></i>-->
 			</div>
+
+			<div style="text-align: center">
+				<h2 style=" margin-top: 25px; color: green; font-weight: bold;">Payment Success!</h2>
+				<p style="color: #047127; font-weight: bold;">Thank you!</p>
+			</div>
+
+
 			<div class="d-flex justify-content-center">
 				<div class="row mt-3">
-
-					<div class="col-sm mr-4">
-						<input type="submit"
-							style="width: 220px; font-size: 16px; font-weight: bold; background-color: #8DA195;"
-							value="Print">
+					<div class="col-sm">
+						<a href="hotels_home.jsp" class="btn btn-outline-danger btn-sm"
+							style="border-radius: 25px; width: 200px; font-size: 16px; font-weight: bold;">Close
+						</a>
 					</div>
 				</div>
-				<div class="col-sm">
-					<a href="hotels_home.jsp" class="btn btn-danger btn-sm mt-3 pt-2"
-						style="height: 48px; width: 200px; font-size: 16px; font-weight: bold;">Close
-					</a>
-				</div>
 			</div>
-		</div>
 
+		</div>
 	</div>
 
 </body>
