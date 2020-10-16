@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" >
 <style>
 body {
   font-family: Arial;
@@ -96,20 +97,60 @@ img {
 .demo:hover {
   opacity: 1;
 }
+.special-color-dark{
+  background: #000;
+}
+.nav-link{
+	color:#fff !important;	
+}
 </style>
 <body>
+<!-- ------------------------ Navigation Bar ---------------------------------- -->
 
-<h2 style="text-align:center">Stags in Chester</h2>
+<nav
+class="navbar fixed-top navbar-expand-lg navbar-light special-color-dark">
+<!-- Collapse button -->
+<button class="navbar-toggler" type="button" data-toggle="collapse"
+  data-target="#basicExampleNav" aria-controls="basicExampleNav"
+  aria-expanded="false" aria-label="Toggle navigation">
+  <span class="navbar-toggler-icon"></span>
+</button>
 
-<p><b><u>Heritage bus tour of Chester</u></b>
-<br>Your wedding day is the most important day of your life and an essential part of the experience is the journey the wedding party makes to the Church and then on to the reception after the service.
-We are pleased to be able to offer you the chance to hire our vintage bus to ensure that this part of your day is remembered for the unique experience we will provide.
-The bus will also be availble to be a backdrop for those all important wedding photographs, not that you will need photographs to remember the special journey you made on our bus.
-Because of the limitations of the vehicle, it's top speed is only 30mph, we can only work within 25 miles of Chester.
-The vehicle has a total passenger capacity of 33 (17 upstairs and 16 downstairs). The upstairs of the bus is open top whilst the downstairs section has been transformed into a 1st class compartment to offer an alternative experience of Victorian travel.</br>
-<br>The bus, along with fully costumed and knowledgeable driver and tour guide, is available for weddings at a rate of only £200 for the 1st hour followed by £120 for each additional hour thereafter.
-For wedding enquiries please call 0844 - 585 - 4144 or e-mail info@chesterheritagetours.co.uk. "A Unique Experence on your Special Day"</br>
-</P>
+<!-- Collapsible content -->
+<div class="collapse navbar-collapse" id="basicExampleNav">
+
+  <!-- Links -->
+  <ul class="navbar-nav mr-auto">
+    <li class="nav-item "><a class="nav-link"
+      href="hotels_home.jsp"><i class="fas fa-hotel"></i></a></li>
+    <li class="nav-item "><a class="nav-link"
+      href="#">Guest House</a></li>
+    <li class="nav-item "><a class="nav-link"
+      href="#">Resturant</a></li>
+    <li class="nav-item "><a class="nav-link"
+      href="#">Events</a></li>
+  </ul>
+  <!-- Links -->
+</div>
+<!-- Collapsible content -->
+</nav>
+<br>
+
+<!-- ---------------------------- End of Navigation Bar ----------------------------- -->
+<h2  style="margin-top:80px !important;text-align:center">Stags in Chester</h2>
+
+<div class="container mt-2">
+    <h4> Heritage bus tour of Chester</h4>
+    <p>Your wedding day is the most important day of your life and an essential part of the experience is the journey the wedding party makes to the Church and then on to the reception after the service.
+    We are pleased to be able to offer you the chance to hire our vintage bus to ensure that this part of your day is remembered for the unique experience we will provide.
+    The bus will also be availble to be a backdrop for those all important wedding photographs, not that you will need photographs to remember the special journey you made on our bus.
+    Because of the limitations of the vehicle, it's top speed is only 30mph, we can only work within 25 miles of Chester.
+    The vehicle has a total passenger capacity of 33 (17 upstairs and 16 downstairs). The upstairs of the bus is open top whilst the downstairs section has been transformed into a 1st class compartment to offer an alternative experience of Victorian travel.</br>
+    <br>The bus, along with fully costumed and knowledgeable driver and tour guide, is available for weddings at a rate of only £200 for the 1st hour followed by £120 for each additional hour thereafter.
+    For wedding enquiries please call 0844 - 585 - 4144 or e-mail info@chesterheritagetours.co.uk. "A Unique Experence on your Special Day"</br>
+    </P>
+</div>
+
 
 <div class="container">
   <div class="mySlides">
@@ -170,7 +211,16 @@ For wedding enquiries please call 0844 - 585 - 4144 or e-mail info@chesterherita
     </div>
   </div>
 </div>
- <button type="submit">Book</button>
+ <button class="btn btn-success py-2 px-4 mt-3" style="margin-left: 250px;" type="submit">Book</button>
+ 	<!-- --------------------------- Footer -------------------------- -->
+   <footer class="page-footer font-small special-color-dark pt-4">
+
+		<!-- Copyright -->
+		<div class="footer-copyright text-center py-3" style="color:#fff;">Chester Tourist</div>
+		<!-- Copyright -->
+
+	</footer>
+	<!-- ------------------------- End of Footer --------------------- -->
 <script>
 var slideIndex = 1;
 showSlides(slideIndex);
