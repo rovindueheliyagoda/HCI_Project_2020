@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.column {
+  float: left;
+  width: 77.3%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.container {
+  padding: 0 16px;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+}
+
+.button {
+  border: none
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: #555;
+} 
+
+.btnactive {
+  background-color: #666;
+  color: white;
+}
+.special-color-dark{
+  background: #000;
+}
+.nav-link{
+	color:#fff !important;	
+}
+</style>
+</head>
+<body>
+
+<!-- ------------------------ Navigation Bar ---------------------------------- -->
+
+	<nav
+  class="navbar fixed-top navbar-expand-lg navbar-light special-color-dark">
+  <!-- Collapse button -->
+  <button class="navbar-toggler" type="button" data-toggle="collapse"
+    data-target="#basicExampleNav" aria-controls="basicExampleNav"
+    aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <!-- Collapsible content -->
+  <div class="collapse navbar-collapse" id="basicExampleNav">
+
+    <!-- Links -->
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item "><a class="nav-link"
+        href="hotels_home.jsp"><i class="fas fa-hotel"></i></a></li>
+      <li class="nav-item "><a class="nav-link"
+        href="#">Guest House</a></li>
+      <li class="nav-item "><a class="nav-link"
+        href="#">Resturant</a></li>
+      <li class="nav-item "><a class="nav-link"
+        href="#">Events</a></li>
+    </ul>
+    <!-- Links -->
+  </div>
+  <!-- Collapsible content -->
+</nav>
+<br>
+
+<!-- ---------------------------- End of Navigation Bar ----------------------------- -->
+
+<h2><b>Chester Pubs</b></h2>
+<p><b><centre>--The Guidence of Chester travel--</centre></p>
+<p>Chester is a walled city in Cheshire, England, on the River Dee, close to the border with Wales. With a population of 79,645 in 2011,[1] it is the most populous settlement of Cheshire West and Chester, which had a population of 329,608 in 2011,[1] and serves as the unitary authority's administrative headquarters. Chester is the second-largest settlement in Cheshire after Warrington.</p>
+
+<div class="row">
+  <div class="column">
+    <div class="card">
+      <img src="chester.jpg" alt="Stag" style="width:100%">
+      <div class="container">
+        <h2>Stags in Chester</h2>
+        <p class="title">Many kind of service packages offered by people of Chester</p>
+        <p>You can find any kind of service in Chester through here...</p>
+        <p>Discover more inluding nothern supercar hire,Mobile bar,Chester adventures...etc</p>
+        <p><button onclick="link('stags')" class="button">Find Out</button></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <img src="maan.jpg" alt="Club" style="width:100%">
+      <div class="container">
+        <h2>Clubs</h2>
+        <p class="title">There're many clubs located in Chester</p>
+        <p>Find the club that perfectly suits for you..& explore the night life in Chester</p>
+        <p><button onclick="link('pubs')"  class="button">Find out</button></p>
+      </div>
+    </div>
+  </div>
+  
+  <div class="column">
+    <div class="card">
+      <img src="3.jpg" alt="John" style="width:100%">
+      <div class="container">
+        <h2>Pubs</h2>
+        <p class="title">Pubs which are located in Chester</p>
+        <p>Discover the many more pubs with-in the nice locations...</p>
+        <p><button onclick="link('clubs')" class="button">Find Out</button></p>
+      </div>
+    </div>
+  </div>
+</div> 
+<!-- --------------------------- Footer -------------------------- -->
+	<footer class="page-footer font-small special-color-dark pt-4">
+
+		<!-- Copyright -->
+		<div class="footer-copyright text-center py-3" style="color:#fff;">Chester Tourist</div>
+		<!-- Copyright -->
+
+	</footer>
+	<!-- ------------------------- End of Footer --------------------- -->
+
+<script>
+	function link(filter){
+		location.href = filter+".html"
+	}
+</script>
+
+</body>
+</html>

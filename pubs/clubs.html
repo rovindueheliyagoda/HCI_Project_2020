@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Arial;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  vertical-align: middle;
+}
+
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+  position: relative;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+} 
+
+.btnactive {
+  background-color: #666;
+  color: white;
+}
+.special-color-dark{
+  background: #000;
+}
+.nav-link{
+	color:#fff !important;	
+}
+</style>
+<body>
+	<!-- ------------------------ Navigation Bar ---------------------------------- -->
+
+	<nav
+  class="navbar fixed-top navbar-expand-lg navbar-light special-color-dark">
+  <!-- Collapse button -->
+  <button class="navbar-toggler" type="button" data-toggle="collapse"
+    data-target="#basicExampleNav" aria-controls="basicExampleNav"
+    aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <!-- Collapsible content -->
+  <div class="collapse navbar-collapse" id="basicExampleNav">
+
+    <!-- Links -->
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item "><a class="nav-link"
+        href="hotels_home.jsp"><i class="fas fa-hotel"></i></a></li>
+      <li class="nav-item "><a class="nav-link"
+        href="#">Guest House</a></li>
+      <li class="nav-item "><a class="nav-link"
+        href="#">Resturant</a></li>
+      <li class="nav-item "><a class="nav-link"
+        href="#">Events</a></li>
+    </ul>
+    <!-- Links -->
+  </div>
+  <!-- Collapsible content -->
+</nav>
+<br>
+
+<!-- ---------------------------- End of Navigation Bar ----------------------------- -->
+<h2 style="text-align:center">CLUBS</h2>
+
+<p><b><u>The Cruise Club - St.John'street</u></b>
+ <br>This club is located in the centre of the beautiful city of Chester, Cruise will feature six very distinct themed areas and brings together a hideaway of luxury and style. With pulse quickening sounds from the hottest DJs and beats of some of the most progressive music mixes, old and new, it is destined to become the top night spot for discerning people.</br>
+ <br>Open until midnight Sunday to Wednesday, 1am Thursday and 2am Friday and Saturday, we are the perfect venue for you to enjoy a superb night out. DJ's play funky beats, euphoric house tunes and classic anthems every night of the week. Revolution Chester will leave you gagging for more!
+
+</P>
+
+<div class="container">
+  <div class="mySlides">
+    <div class="numbertext">1 / 6</div>
+    <img src="a.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">2 / 6</div>
+    <img src="b.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">3 / 6</div>
+    <img src="c.jpg" style="width:100%">
+  </div>
+    
+  <div class="mySlides">
+    <div class="numbertext">4 / 6</div>
+    <img src="d.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">5 / 6</div>
+    <img src="e.jpg" style="width:100%">
+  </div>
+    
+  <div class="mySlides">
+    <div class="numbertext">6 / 6</div>
+    <img src="f.jpg" style="width:100%">
+  </div>
+    
+  <a class="prev" onclick="plusSlides(-1)">❮</a>
+  <a class="next" onclick="plusSlides(1)">❯</a>
+
+  <div class="caption-container">
+    <p id="caption"></p>
+  </div>
+
+  <div class="row">
+    <div class="column">
+      <img class="demo cursor" src="a.jpg" style="width:100%" onclick="currentSlide(1)" alt="">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="b.jpg" style="width:100%" onclick="currentSlide(2)" alt="">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="c.jpg" style="width:100%" onclick="currentSlide(3)" alt="">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="d.jpg" style="width:100%" onclick="currentSlide(4)" alt="">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="e.jpg" style="width:100%" onclick="currentSlide(5)" alt="">
+    </div>    
+    <div class="column">
+      <img class="demo cursor" src="f.jpg" style="width:100%" onclick="currentSlide(6)" alt="">
+    </div>
+  </div>
+</div>
+ <button type="submit">Book</button>
+
+
+	<!-- --------------------------- Footer -------------------------- -->
+	<footer class="page-footer font-small special-color-dark pt-4">
+
+		<!-- Copyright -->
+		<div class="footer-copyright text-center py-3" style="color:#fff;">Chester Tourist</div>
+		<!-- Copyright -->
+
+	</footer>
+	<!-- ------------------------- End of Footer --------------------- -->
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+    
+</body>
+</html>
