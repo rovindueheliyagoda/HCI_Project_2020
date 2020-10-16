@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" >
+<style>
+* {box-sizing: border-box;}
+body {font-family: Verdana, sans-serif;}
+.mySlides {display: none;height:500px}
+.mySlides img{
+	height:500px;
+}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 900px;
+  height:500px;
+  min-height:500px;
+  position: relative;
+  margin: auto;
+} 
+
+.button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+.button1 {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 18px 12px;
+  position: absolute;
+  bottom: 18px;
+  width: 100%;
+  text-align:center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 500px) {
+  .text {font-size: 11px}
+} 
+
+.btnactive {
+  background-color: #666;
+  color: white;
+}
+.special-color-dark{
+  background: #000;
+}
+.nav-link{
+	color:#fff !important;	
+}
+</style>
+</head>
+<body> 
+<!-- ------------------------ Navigation Bar ---------------------------------- -->
+
+	<nav
+  class="navbar fixed-top navbar-expand-lg navbar-light special-color-dark">
+  <!-- Collapse button -->
+  <button class="navbar-toggler" type="button" data-toggle="collapse"
+    data-target="#basicExampleNav" aria-controls="basicExampleNav"
+    aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <!-- Collapsible content -->
+  <div class="collapse navbar-collapse" id="basicExampleNav">
+
+    <!-- Links -->
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item "><a class="nav-link"
+        href="hotels_home.jsp"><i class="fas fa-hotel"></i></a></li>
+      <li class="nav-item "><a class="nav-link"
+        href="#">Guest House</a></li>
+      <li class="nav-item "><a class="nav-link"
+        href="#">Resturant</a></li>
+      <li class="nav-item "><a class="nav-link"
+        href="#">Events</a></li>
+    </ul>
+    <!-- Links -->
+  </div>
+  <!-- Collapsible content -->
+</nav>
+<br>
+
+<!-- ---------------------------- End of Navigation Bar ----------------------------- -->
+
+<h2>Restaurant In Chester</h2>
+
+
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 3</div>
+  <img src="1.jpg" style="width:100%;">
+  <div class="text">Caption Text</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 3</div>
+  <img src="2.jpg" style="width:100%">
+  <div class="text">Caption Two</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 3</div>
+  <img src="3.jpg" style="width:100%">
+  <div class="text">Caption Three</div>
+</div>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+</div>
+
+		<button class="btn btn-primary" mx-auto py-2 px-5" style="margin-left: 250px !important;" onclick="myFunction()">Find</button>
+		
+		<!-- --------------------------- Footer -------------------------- -->
+	<footer class="page-footer font-small special-color-dark pt-4">
+
+		<!-- Copyright -->
+		<div class="footer-copyright text-center py-3" style="color:#fff;">Chester Tourist</div>
+		<!-- Copyright -->
+
+	</footer>
+	<!-- ------------------------- End of Footer --------------------- -->
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" ></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 2000); // Change image every 2 seconds
+} 
+
+
+function myFunction() {
+  location.href = "kk.html";
+}
+
+</script>
+
+</body>
+</html> 
